@@ -1,0 +1,247 @@
+{
+  "timestamp": "2026-11-09T13:40:16.724415+00:00",
+  "status": "incomplete",
+  "reason": "tool_failure",
+  "model_mode": "mock",
+  "model": "scripted-test-double",
+  "tool_mode": "local_synthetic",
+  "max_steps": 14,
+  "steps_used": 6,
+  "total_cost": 8,
+  "elapsed_minutes": 5,
+  "initial_state": {
+    "spent": 0,
+    "elapsed_minutes": 0,
+    "steps": {},
+    "results": {},
+    "estimates": [],
+    "events": [],
+    "failures_used": [],
+    "saved_plan": null
+  },
+  "state": {
+    "elapsed_minutes": 5,
+    "estimates": [
+      {
+        "budget_gap": 2,
+        "deadline_gap_minutes": 0,
+        "feasible": false,
+        "remaining_cost": 10,
+        "remaining_minutes": 8,
+        "spent": 2,
+        "total_cost": 12,
+        "total_minutes": 9,
+        "variant": "premium"
+      },
+      {
+        "budget_gap": 0,
+        "deadline_gap_minutes": 0,
+        "feasible": true,
+        "remaining_cost": 6,
+        "remaining_minutes": 4,
+        "spent": 2,
+        "total_cost": 8,
+        "total_minutes": 5,
+        "variant": "basic"
+      }
+    ],
+    "events": [
+      {
+        "cost": 2,
+        "minutes": 1,
+        "status": "succeeded",
+        "step": "search_materials"
+      },
+      {
+        "cost": 6,
+        "minutes": 4,
+        "status": "succeeded",
+        "step": "generate_script:basic"
+      },
+      {
+        "step": "save_plan",
+        "status": "failed",
+        "cost": 0,
+        "minutes": 0
+      }
+    ],
+    "failures_used": [],
+    "results": {
+      "materials": [
+        {
+          "fact": "本店提供现磨咖啡，可选择热饮或冰饮。",
+          "id": "P01",
+          "keywords": [
+            "coffee",
+            "咖啡"
+          ],
+          "visual": "拍摄磨豆、萃取和成品镜头"
+        }
+      ],
+      "script:basic": {
+        "format": "简洁图文与口播",
+        "scenes": [
+          {
+            "narration": "本店提供现磨咖啡，可选择热饮或冰饮。",
+            "visual": "拍摄磨豆、萃取和成品镜头"
+          }
+        ],
+        "source_ids": [
+          "P01"
+        ],
+        "title": "咖啡新品活动",
+        "variant": "basic"
+      }
+    },
+    "saved_plan": null,
+    "spent": 8,
+    "steps": {
+      "generate_script:basic": "succeeded",
+      "search_materials": "succeeded",
+      "save_plan": "failed"
+    }
+  },
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_materials",
+      "arguments": {},
+      "observation": {
+        "materials": [
+          {
+            "id": "P01",
+            "keywords": [
+              "coffee",
+              "咖啡"
+            ],
+            "fact": "本店提供现磨咖啡，可选择热饮或冰饮。",
+            "visual": "拍摄磨豆、萃取和成品镜头"
+          }
+        ],
+        "additional_cost": 2,
+        "available_variants": {
+          "premium": {
+            "cost": 10,
+            "minutes": 8,
+            "format": "多镜头活动短片"
+          },
+          "basic": {
+            "cost": 6,
+            "minutes": 4,
+            "format": "简洁图文与口播"
+          }
+        }
+      },
+      "decision_summary": "Offline deterministic test policy; not real model evidence.",
+      "model_response": {},
+      "next_action": "estimate_cost"
+    },
+    {
+      "step": 2,
+      "action": "estimate_cost",
+      "arguments": {
+        "variant": "premium"
+      },
+      "observation": {
+        "variant": "premium",
+        "spent": 2,
+        "remaining_cost": 10,
+        "total_cost": 12,
+        "remaining_minutes": 8,
+        "total_minutes": 9,
+        "budget_gap": 2,
+        "deadline_gap_minutes": 0,
+        "feasible": false
+      },
+      "decision_summary": "Offline deterministic test policy; not real model evidence.",
+      "model_response": {},
+      "next_action": "estimate_cost"
+    },
+    {
+      "step": 3,
+      "action": "estimate_cost",
+      "arguments": {
+        "variant": "basic"
+      },
+      "observation": {
+        "variant": "basic",
+        "spent": 2,
+        "remaining_cost": 6,
+        "total_cost": 8,
+        "remaining_minutes": 4,
+        "total_minutes": 5,
+        "budget_gap": 0,
+        "deadline_gap_minutes": 0,
+        "feasible": true
+      },
+      "decision_summary": "Offline deterministic test policy; not real model evidence.",
+      "model_response": {},
+      "next_action": "generate_script"
+    },
+    {
+      "step": 4,
+      "action": "generate_script",
+      "arguments": {
+        "variant": "basic"
+      },
+      "observation": {
+        "script": {
+          "title": "咖啡新品活动",
+          "variant": "basic",
+          "source_ids": [
+            "P01"
+          ],
+          "scenes": [
+            {
+              "visual": "拍摄磨豆、萃取和成品镜头",
+              "narration": "本店提供现磨咖啡，可选择热饮或冰饮。"
+            }
+          ],
+          "format": "简洁图文与口播"
+        },
+        "additional_cost": 6,
+        "spent": 8
+      },
+      "decision_summary": "Offline deterministic test policy; not real model evidence.",
+      "model_response": {},
+      "next_action": "save_plan"
+    },
+    {
+      "step": 5,
+      "action": "save_plan",
+      "arguments": {
+        "variant": "basic"
+      },
+      "observation": {
+        "error": "save_failed",
+        "retryable": false,
+        "saved": false,
+        "retained_results": [
+          "materials",
+          "script:basic"
+        ]
+      },
+      "decision_summary": "Offline deterministic test policy; not real model evidence.",
+      "model_response": {},
+      "next_action": "finish"
+    },
+    {
+      "step": 6,
+      "action": "finish",
+      "arguments": {},
+      "observation": {
+        "finished": true,
+        "status": "incomplete",
+        "reason": "tool_failure",
+        "retained_results": [
+          "materials",
+          "script:basic"
+        ]
+      },
+      "decision_summary": "Offline deterministic test policy; not real model evidence.",
+      "model_response": {},
+      "next_action": "stop:tool_failure"
+    }
+  ],
+  "time_basis": "Deterministic simulated tool minutes from explicit start_time; not real execution latency."
+}

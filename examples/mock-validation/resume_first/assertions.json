@@ -1,0 +1,7 @@
+{
+  "expected_status": true,
+  "cost_within_budget": true,
+  "not_saved": true,
+  "failed_step_recorded": true,
+  "materials_retained": true
+}

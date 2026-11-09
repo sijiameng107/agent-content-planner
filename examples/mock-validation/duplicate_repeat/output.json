@@ -1,0 +1,252 @@
+{
+  "timestamp": "2026-11-09T13:40:16.717556+00:00",
+  "status": "completed",
+  "reason": "plan_saved",
+  "model_mode": "mock",
+  "model": "scripted-test-double",
+  "tool_mode": "local_synthetic",
+  "max_steps": 14,
+  "steps_used": 1,
+  "total_cost": 8,
+  "elapsed_minutes": 5,
+  "initial_state": {
+    "elapsed_minutes": 5,
+    "estimates": [
+      {
+        "budget_gap": 2,
+        "deadline_gap_minutes": 0,
+        "feasible": false,
+        "remaining_cost": 10,
+        "remaining_minutes": 8,
+        "spent": 2,
+        "total_cost": 12,
+        "total_minutes": 9,
+        "variant": "premium"
+      },
+      {
+        "budget_gap": 0,
+        "deadline_gap_minutes": 0,
+        "feasible": true,
+        "remaining_cost": 6,
+        "remaining_minutes": 4,
+        "spent": 2,
+        "total_cost": 8,
+        "total_minutes": 5,
+        "variant": "basic"
+      }
+    ],
+    "events": [
+      {
+        "cost": 2,
+        "minutes": 1,
+        "status": "succeeded",
+        "step": "search_materials"
+      },
+      {
+        "cost": 6,
+        "minutes": 4,
+        "status": "succeeded",
+        "step": "generate_script:basic"
+      },
+      {
+        "cost": 0,
+        "minutes": 0,
+        "status": "succeeded",
+        "step": "save_plan"
+      }
+    ],
+    "failures_used": [],
+    "results": {
+      "materials": [
+        {
+          "fact": "本店提供现磨咖啡，可选择热饮或冰饮。",
+          "id": "P01",
+          "keywords": [
+            "coffee",
+            "咖啡"
+          ],
+          "visual": "拍摄磨豆、萃取和成品镜头"
+        }
+      ],
+      "script:basic": {
+        "format": "简洁图文与口播",
+        "scenes": [
+          {
+            "narration": "本店提供现磨咖啡，可选择热饮或冰饮。",
+            "visual": "拍摄磨豆、萃取和成品镜头"
+          }
+        ],
+        "source_ids": [
+          "P01"
+        ],
+        "title": "咖啡新品活动",
+        "variant": "basic"
+      }
+    },
+    "saved_plan": {
+      "budget": 10,
+      "deadline": "2026-11-10T09:20:00+08:00",
+      "elapsed_minutes": 5,
+      "plan_id": "00d66d7833c807193b3c8f8b6c75eab8cbee6ca72411e242c93fe44a4f22a1ae",
+      "projected_completion": "2026-11-10T09:05:00+08:00",
+      "script": {
+        "format": "简洁图文与口播",
+        "scenes": [
+          {
+            "narration": "本店提供现磨咖啡，可选择热饮或冰饮。",
+            "visual": "拍摄磨豆、萃取和成品镜头"
+          }
+        ],
+        "source_ids": [
+          "P01"
+        ],
+        "title": "咖啡新品活动",
+        "variant": "basic"
+      },
+      "status": "saved",
+      "task_plan": [
+        "search_materials",
+        "estimate_cost:basic",
+        "generate_script:basic",
+        "save_plan"
+      ],
+      "theme": "咖啡新品活动",
+      "total_cost": 8,
+      "variant": "basic"
+    },
+    "spent": 8,
+    "steps": {
+      "generate_script:basic": "succeeded",
+      "save_plan": "succeeded",
+      "search_materials": "succeeded"
+    }
+  },
+  "state": {
+    "elapsed_minutes": 5,
+    "estimates": [
+      {
+        "budget_gap": 2,
+        "deadline_gap_minutes": 0,
+        "feasible": false,
+        "remaining_cost": 10,
+        "remaining_minutes": 8,
+        "spent": 2,
+        "total_cost": 12,
+        "total_minutes": 9,
+        "variant": "premium"
+      },
+      {
+        "budget_gap": 0,
+        "deadline_gap_minutes": 0,
+        "feasible": true,
+        "remaining_cost": 6,
+        "remaining_minutes": 4,
+        "spent": 2,
+        "total_cost": 8,
+        "total_minutes": 5,
+        "variant": "basic"
+      }
+    ],
+    "events": [
+      {
+        "cost": 2,
+        "minutes": 1,
+        "status": "succeeded",
+        "step": "search_materials"
+      },
+      {
+        "cost": 6,
+        "minutes": 4,
+        "status": "succeeded",
+        "step": "generate_script:basic"
+      },
+      {
+        "cost": 0,
+        "minutes": 0,
+        "status": "succeeded",
+        "step": "save_plan"
+      }
+    ],
+    "failures_used": [],
+    "results": {
+      "materials": [
+        {
+          "fact": "本店提供现磨咖啡，可选择热饮或冰饮。",
+          "id": "P01",
+          "keywords": [
+            "coffee",
+            "咖啡"
+          ],
+          "visual": "拍摄磨豆、萃取和成品镜头"
+        }
+      ],
+      "script:basic": {
+        "format": "简洁图文与口播",
+        "scenes": [
+          {
+            "narration": "本店提供现磨咖啡，可选择热饮或冰饮。",
+            "visual": "拍摄磨豆、萃取和成品镜头"
+          }
+        ],
+        "source_ids": [
+          "P01"
+        ],
+        "title": "咖啡新品活动",
+        "variant": "basic"
+      }
+    },
+    "saved_plan": {
+      "budget": 10,
+      "deadline": "2026-11-10T09:20:00+08:00",
+      "elapsed_minutes": 5,
+      "plan_id": "00d66d7833c807193b3c8f8b6c75eab8cbee6ca72411e242c93fe44a4f22a1ae",
+      "projected_completion": "2026-11-10T09:05:00+08:00",
+      "script": {
+        "format": "简洁图文与口播",
+        "scenes": [
+          {
+            "narration": "本店提供现磨咖啡，可选择热饮或冰饮。",
+            "visual": "拍摄磨豆、萃取和成品镜头"
+          }
+        ],
+        "source_ids": [
+          "P01"
+        ],
+        "title": "咖啡新品活动",
+        "variant": "basic"
+      },
+      "status": "saved",
+      "task_plan": [
+        "search_materials",
+        "estimate_cost:basic",
+        "generate_script:basic",
+        "save_plan"
+      ],
+      "theme": "咖啡新品活动",
+      "total_cost": 8,
+      "variant": "basic"
+    },
+    "spent": 8,
+    "steps": {
+      "generate_script:basic": "succeeded",
+      "save_plan": "succeeded",
+      "search_materials": "succeeded"
+    }
+  },
+  "trace": [
+    {
+      "step": 1,
+      "action": "finish",
+      "arguments": {},
+      "observation": {
+        "finished": true,
+        "status": "completed",
+        "reason": "plan_saved"
+      },
+      "decision_summary": "Offline deterministic test policy; not real model evidence.",
+      "model_response": {},
+      "next_action": "stop:plan_saved"
+    }
+  ],
+  "time_basis": "Deterministic simulated tool minutes from explicit start_time; not real execution latency."
+}

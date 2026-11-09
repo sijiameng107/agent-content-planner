@@ -1,0 +1,23 @@
+test_budget_impossible (test_planner.Tests.test_budget_impossible) ... ok
+test_catalog_changes_not_stale_cache (test_planner.Tests.test_catalog_changes_not_stale_cache) ... ok
+test_deadline (test_planner.Tests.test_deadline) ... ok
+test_duplicate (test_planner.Tests.test_duplicate) ... ok
+test_generation_cost_gate (test_planner.Tests.test_generation_cost_gate) ... ok
+test_invalid_budget (test_planner.Tests.test_invalid_budget) ... ok
+test_invalid_time (test_planner.Tests.test_invalid_time) ... ok
+test_invalid_tool (test_planner.Tests.test_invalid_tool) ... ok
+test_missing_budget (test_planner.Tests.test_missing_budget) ... ok
+test_missing_deadline (test_planner.Tests.test_missing_deadline) ... ok
+test_no_materials (test_planner.Tests.test_no_materials) ... ok
+test_normal (test_planner.Tests.test_normal) ... ok
+test_replan (test_planner.Tests.test_replan) ... ok
+test_resume (test_planner.Tests.test_resume) ... ok
+test_save_failure (test_planner.Tests.test_save_failure) ... ok
+test_save_without_script (test_planner.Tests.test_save_without_script) ... ok
+test_step_limit (test_planner.Tests.test_step_limit) ... ok
+test_transient_failure (test_planner.Tests.test_transient_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.021s
+
+OK

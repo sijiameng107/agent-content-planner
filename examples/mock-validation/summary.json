@@ -1,0 +1,161 @@
+{
+  "mode": "mock",
+  "expected": 13,
+  "executed": 13,
+  "passed": 13,
+  "cases": [
+    {
+      "case": "normal",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "cost_within_budget": true,
+        "saved": true,
+        "deadline": true
+      },
+      "trace": "normal/output.json"
+    },
+    {
+      "case": "missing_budget",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "cost_within_budget": true,
+        "not_saved": true
+      },
+      "trace": "missing_budget/output.json"
+    },
+    {
+      "case": "missing_deadline",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "cost_within_budget": true,
+        "not_saved": true
+      },
+      "trace": "missing_deadline/output.json"
+    },
+    {
+      "case": "tool_failure",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "cost_within_budget": true,
+        "not_saved": true,
+        "failed_step_recorded": true,
+        "materials_retained": true
+      },
+      "trace": "tool_failure/output.json"
+    },
+    {
+      "case": "budget_replan",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "cost_within_budget": true,
+        "saved": true,
+        "deadline": true,
+        "cost_8": true,
+        "observed_12_then_8": true
+      },
+      "trace": "budget_replan/output.json"
+    },
+    {
+      "case": "budget_impossible",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "cost_within_budget": true,
+        "not_saved": true
+      },
+      "trace": "budget_impossible/output.json"
+    },
+    {
+      "case": "deadline_impossible",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "cost_within_budget": true,
+        "not_saved": true
+      },
+      "trace": "deadline_impossible/output.json"
+    },
+    {
+      "case": "duplicate_first",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "cost_within_budget": true,
+        "saved": true,
+        "deadline": true,
+        "cost_8": true
+      },
+      "trace": "duplicate_first/output.json"
+    },
+    {
+      "case": "duplicate_repeat",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "cost_within_budget": true,
+        "saved": true,
+        "deadline": true,
+        "cost_8": true,
+        "no_new_charge": true,
+        "one_plan": true
+      },
+      "trace": "duplicate_repeat/output.json"
+    },
+    {
+      "case": "resume_first",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "cost_within_budget": true,
+        "not_saved": true,
+        "failed_step_recorded": true,
+        "materials_retained": true
+      },
+      "trace": "resume_first/output.json"
+    },
+    {
+      "case": "resume_second",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "cost_within_budget": true,
+        "saved": true,
+        "deadline": true,
+        "cost_8": true,
+        "retained_search": true,
+        "one_search_charge": true
+      },
+      "trace": "resume_second/output.json"
+    },
+    {
+      "case": "transient_failure",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "cost_within_budget": true,
+        "saved": true,
+        "deadline": true,
+        "cost_8": true
+      },
+      "trace": "transient_failure/output.json"
+    },
+    {
+      "case": "save_failure",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "cost_within_budget": true,
+        "not_saved": true,
+        "failed_step_recorded": true,
+        "materials_retained": true
+      },
+      "trace": "save_failure/output.json"
+    }
+  ],
+  "note": "Mock proves control flow only; live decision evidence requires actual model calls."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "incomplete",
+  "reason": "missing_input",
+  "details": {
+    "error": "missing_input",
+    "missing": [
+      "deadline"
+    ]
+  },
+  "model_mode": "mock",
+  "items": {},
+  "trace": [],
+  "total_cost": 0
+}

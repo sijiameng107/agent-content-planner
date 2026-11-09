@@ -1,0 +1,179 @@
+{
+  "timestamp": "2026-11-09T13:40:16.713447+00:00",
+  "status": "incomplete",
+  "reason": "constraints_unresolved",
+  "model_mode": "mock",
+  "model": "scripted-test-double",
+  "tool_mode": "local_synthetic",
+  "max_steps": 14,
+  "steps_used": 4,
+  "total_cost": 2,
+  "elapsed_minutes": 1,
+  "initial_state": {
+    "spent": 0,
+    "elapsed_minutes": 0,
+    "steps": {},
+    "results": {},
+    "estimates": [],
+    "events": [],
+    "failures_used": [],
+    "saved_plan": null
+  },
+  "state": {
+    "elapsed_minutes": 1,
+    "estimates": [
+      {
+        "budget_gap": 5,
+        "deadline_gap_minutes": 0,
+        "feasible": false,
+        "remaining_cost": 10,
+        "remaining_minutes": 8,
+        "spent": 2,
+        "total_cost": 12,
+        "total_minutes": 9,
+        "variant": "premium"
+      },
+      {
+        "variant": "basic",
+        "spent": 2,
+        "remaining_cost": 6,
+        "total_cost": 8,
+        "remaining_minutes": 4,
+        "total_minutes": 5,
+        "budget_gap": 1,
+        "deadline_gap_minutes": 0,
+        "feasible": false
+      }
+    ],
+    "events": [
+      {
+        "cost": 2,
+        "minutes": 1,
+        "status": "succeeded",
+        "step": "search_materials"
+      }
+    ],
+    "failures_used": [],
+    "results": {
+      "materials": [
+        {
+          "fact": "本店提供现磨咖啡，可选择热饮或冰饮。",
+          "id": "P01",
+          "keywords": [
+            "coffee",
+            "咖啡"
+          ],
+          "visual": "拍摄磨豆、萃取和成品镜头"
+        }
+      ]
+    },
+    "saved_plan": null,
+    "spent": 2,
+    "steps": {
+      "search_materials": "succeeded"
+    }
+  },
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_materials",
+      "arguments": {},
+      "observation": {
+        "materials": [
+          {
+            "id": "P01",
+            "keywords": [
+              "coffee",
+              "咖啡"
+            ],
+            "fact": "本店提供现磨咖啡，可选择热饮或冰饮。",
+            "visual": "拍摄磨豆、萃取和成品镜头"
+          }
+        ],
+        "additional_cost": 2,
+        "available_variants": {
+          "premium": {
+            "cost": 10,
+            "minutes": 8,
+            "format": "多镜头活动短片"
+          },
+          "basic": {
+            "cost": 6,
+            "minutes": 4,
+            "format": "简洁图文与口播"
+          }
+        }
+      },
+      "decision_summary": "Offline deterministic test policy; not real model evidence.",
+      "model_response": {},
+      "next_action": "estimate_cost"
+    },
+    {
+      "step": 2,
+      "action": "estimate_cost",
+      "arguments": {
+        "variant": "premium"
+      },
+      "observation": {
+        "variant": "premium",
+        "spent": 2,
+        "remaining_cost": 10,
+        "total_cost": 12,
+        "remaining_minutes": 8,
+        "total_minutes": 9,
+        "budget_gap": 5,
+        "deadline_gap_minutes": 0,
+        "feasible": false
+      },
+      "decision_summary": "Offline deterministic test policy; not real model evidence.",
+      "model_response": {},
+      "next_action": "estimate_cost"
+    },
+    {
+      "step": 3,
+      "action": "estimate_cost",
+      "arguments": {
+        "variant": "basic"
+      },
+      "observation": {
+        "variant": "basic",
+        "spent": 2,
+        "remaining_cost": 6,
+        "total_cost": 8,
+        "remaining_minutes": 4,
+        "total_minutes": 5,
+        "budget_gap": 1,
+        "deadline_gap_minutes": 0,
+        "feasible": false
+      },
+      "decision_summary": "Offline deterministic test policy; not real model evidence.",
+      "model_response": {},
+      "next_action": "finish"
+    },
+    {
+      "step": 4,
+      "action": "finish",
+      "arguments": {},
+      "observation": {
+        "finished": true,
+        "status": "incomplete",
+        "reason": "constraints_unresolved",
+        "gaps": {
+          "variant": "basic",
+          "spent": 2,
+          "remaining_cost": 6,
+          "total_cost": 8,
+          "remaining_minutes": 4,
+          "total_minutes": 5,
+          "budget_gap": 1,
+          "deadline_gap_minutes": 0,
+          "feasible": false
+        }
+      },
+      "decision_summary": "Offline deterministic test policy; not real model evidence.",
+      "model_response": {},
+      "next_action": "stop:constraints_unresolved"
+    }
+  ],
+  "time_basis": "Deterministic simulated tool minutes from explicit start_time; not real execution latency."
+}

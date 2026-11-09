@@ -1,0 +1,5 @@
+{
+  "materials": [{"id":"P01","keywords":["coffee","咖啡"],"fact":"本店提供现磨咖啡，可选择热饮或冰饮。","visual":"拍摄磨豆、萃取和成品镜头"}],
+  "tools": {"search":{"cost":2,"minutes":1},"estimate":{"cost":0,"minutes":0},"save":{"cost":0,"minutes":0}},
+  "variants": {"premium":{"cost":10,"minutes":8,"format":"多镜头活动短片"},"basic":{"cost":6,"minutes":4,"format":"简洁图文与口播"}}
+}
