@@ -1,0 +1,8 @@
+{
+  "expected_status": true,
+  "cost_within_budget": true,
+  "saved": true,
+  "deadline": true,
+  "cost_8": true,
+  "observed_12_then_8": true
+}

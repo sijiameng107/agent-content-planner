@@ -1,0 +1,222 @@
+{
+  "timestamp": "2026-11-10T06:52:25.027573+00:00",
+  "status": "incomplete",
+  "reason": "tool_failure",
+  "model_mode": "live",
+  "model": "glm-4-flash-250414",
+  "tool_mode": "local_synthetic",
+  "max_steps": 14,
+  "steps_used": 2,
+  "total_cost": 8,
+  "elapsed_minutes": 6,
+  "initial_state": {
+    "elapsed_minutes": 2,
+    "estimates": [
+      {
+        "budget_gap": 0,
+        "deadline_gap_minutes": 0,
+        "feasible": true,
+        "remaining_cost": 8,
+        "remaining_minutes": 5,
+        "spent": 0,
+        "total_cost": 8,
+        "total_minutes": 5,
+        "variant": "basic"
+      },
+      {
+        "budget_gap": 2,
+        "deadline_gap_minutes": 0,
+        "feasible": false,
+        "remaining_cost": 10,
+        "remaining_minutes": 8,
+        "spent": 2,
+        "total_cost": 12,
+        "total_minutes": 9,
+        "variant": "premium"
+      }
+    ],
+    "events": [
+      {
+        "cost": 2,
+        "minutes": 1,
+        "status": "succeeded",
+        "step": "search_materials"
+      },
+      {
+        "cost": 0,
+        "minutes": 1,
+        "status": "failed",
+        "step": "generate_script:basic"
+      }
+    ],
+    "failures_used": [
+      "generate_once"
+    ],
+    "results": {
+      "materials": [
+        {
+          "fact": "本店提供现磨咖啡，可选择热饮或冰饮。",
+          "id": "P01",
+          "keywords": [
+            "coffee",
+            "咖啡"
+          ],
+          "visual": "拍摄磨豆、萃取和成品镜头"
+        }
+      ]
+    },
+    "saved_plan": null,
+    "spent": 2,
+    "steps": {
+      "generate_script:basic": "failed",
+      "search_materials": "succeeded"
+    }
+  },
+  "state": {
+    "elapsed_minutes": 6,
+    "estimates": [
+      {
+        "budget_gap": 0,
+        "deadline_gap_minutes": 0,
+        "feasible": true,
+        "remaining_cost": 8,
+        "remaining_minutes": 5,
+        "spent": 0,
+        "total_cost": 8,
+        "total_minutes": 5,
+        "variant": "basic"
+      },
+      {
+        "budget_gap": 2,
+        "deadline_gap_minutes": 0,
+        "feasible": false,
+        "remaining_cost": 10,
+        "remaining_minutes": 8,
+        "spent": 2,
+        "total_cost": 12,
+        "total_minutes": 9,
+        "variant": "premium"
+      }
+    ],
+    "events": [
+      {
+        "cost": 2,
+        "minutes": 1,
+        "status": "succeeded",
+        "step": "search_materials"
+      },
+      {
+        "cost": 0,
+        "minutes": 1,
+        "status": "failed",
+        "step": "generate_script:basic"
+      },
+      {
+        "step": "generate_script:basic",
+        "status": "succeeded",
+        "cost": 6,
+        "minutes": 4
+      }
+    ],
+    "failures_used": [
+      "generate_once"
+    ],
+    "results": {
+      "materials": [
+        {
+          "fact": "本店提供现磨咖啡，可选择热饮或冰饮。",
+          "id": "P01",
+          "keywords": [
+            "coffee",
+            "咖啡"
+          ],
+          "visual": "拍摄磨豆、萃取和成品镜头"
+        }
+      ],
+      "script:basic": {
+        "title": "咖啡新品活动",
+        "variant": "basic",
+        "source_ids": [
+          "P01"
+        ],
+        "scenes": [
+          {
+            "visual": "拍摄磨豆、萃取和成品镜头",
+            "narration": "本店提供现磨咖啡，可选择热饮或冰饮。"
+          }
+        ],
+        "format": "简洁图文与口播"
+      }
+    },
+    "saved_plan": null,
+    "spent": 8,
+    "steps": {
+      "generate_script:basic": "succeeded",
+      "search_materials": "succeeded"
+    }
+  },
+  "trace": [
+    {
+      "step": 1,
+      "action": "generate_script",
+      "arguments": {
+        "variant": "basic"
+      },
+      "observation": {
+        "script": {
+          "title": "咖啡新品活动",
+          "variant": "basic",
+          "source_ids": [
+            "P01"
+          ],
+          "scenes": [
+            {
+              "visual": "拍摄磨豆、萃取和成品镜头",
+              "narration": "本店提供现磨咖啡，可选择热饮或冰饮。"
+            }
+          ],
+          "format": "简洁图文与口播"
+        },
+        "additional_cost": 6,
+        "spent": 8
+      },
+      "decision_summary": "Basic variant is feasible within budget and time constraints.",
+      "model_response": {
+        "response_id": "20261110145222af364822e4d14f14",
+        "usage": {
+          "completion_tokens": 32,
+          "prompt_tokens": 809,
+          "total_tokens": 841
+        },
+        "finish_reason": "stop"
+      },
+      "next_action": "finish"
+    },
+    {
+      "step": 2,
+      "action": "finish",
+      "arguments": {},
+      "observation": {
+        "finished": true,
+        "status": "incomplete",
+        "reason": "tool_failure",
+        "retained_results": [
+          "materials",
+          "script:basic"
+        ]
+      },
+      "decision_summary": "The basic variant meets the budget and time constraints, and the script has been successfully generated.",
+      "model_response": {
+        "response_id": "2026111014522337e676b9ca1e49b9",
+        "usage": {
+          "completion_tokens": 40,
+          "prompt_tokens": 1041,
+          "total_tokens": 1081
+        },
+        "finish_reason": "stop"
+      },
+      "next_action": "stop:tool_failure"
+    }
+  ],
+  "time_basis": "Deterministic simulated tool minutes from explicit start_time; not real execution latency."
+}

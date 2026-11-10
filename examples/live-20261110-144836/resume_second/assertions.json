@@ -1,0 +1,9 @@
+{
+  "expected_status": false,
+  "cost_within_budget": true,
+  "saved": false,
+  "deadline": false,
+  "cost_8": true,
+  "retained_search": true,
+  "one_search_charge": true
+}

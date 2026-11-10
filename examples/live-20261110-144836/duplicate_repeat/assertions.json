@@ -1,0 +1,9 @@
+{
+  "expected_status": true,
+  "cost_within_budget": true,
+  "saved": true,
+  "deadline": true,
+  "cost_8": true,
+  "no_new_charge": true,
+  "one_plan": true
+}

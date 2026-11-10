@@ -1,0 +1,14 @@
+{
+  "status": "incomplete",
+  "reason": "missing_input",
+  "details": {
+    "error": "missing_input",
+    "missing": [
+      "budget"
+    ]
+  },
+  "model_mode": "live",
+  "items": {},
+  "trace": [],
+  "total_cost": 0
+}
